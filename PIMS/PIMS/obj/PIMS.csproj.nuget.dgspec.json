@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\PIMS\\PIMS\\PIMS.csproj": {}
+    "C:\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\PIMS\\PIMS\\PIMS.csproj": {
+    "C:\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\PIMS\\PIMS\\PIMS.csproj",
+        "projectUniqueName": "C:\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj",
         "projectName": "PIMS",
-        "projectPath": "C:\\Dev\\PIMS\\PIMS\\PIMS.csproj",
+        "projectPath": "C:\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj",
         "packagesPath": "C:\\Users\\thoml\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\PIMS\\PIMS\\obj\\",
+        "outputPath": "C:\\PIMS_Team4\\PIMS\\PIMS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
