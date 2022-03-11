@@ -13,22 +13,22 @@ namespace PIMS.Models
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public string Zipcode { get; set; }
-        public string HomePhone { get; set; }
-        public string WorkPhone { get; set; }
-        public string MobilePhone { get; set; }
+        public int Zipcode { get; set; }
+        public int HomePhone { get; set; }
+        public int WorkPhone { get; set; }
+        public int MobilePhone { get; set; }
         public string EmergencyContact1 { get; set; }
         public string EmergencyContact2 { get; set; }
-        public string AdmitDate { get; set; }
-        public string AdmitTime { get; set; }
+        public DateTime AdmitDate { get; set; }
+        public DateTime AdmitTime { get; set; }
         public string AdmitReason { get; set; }
         public string FamilyDoctor { get; set; }
         public string Facility { get; set; }
-        public string Floor { get; set; }
-        public string RoomNumber { get; set; }
-        public string BedNumber { get; set; }
-        public string DischargeDate { get; set; }
-        public string DischargeTime { get; set; }
+        public int Floor { get; set; }
+        public int RoomNumber { get; set; }
+        public int BedNumber { get; set; }
+        public DateTime DischargeDate { get; set; }
+        public DateTime DischargeTime { get; set; }
         public string DoctorNotes { get; set; }
         public string NurseNotes { get; set; }
         public string Prescriptions { get; set; }
@@ -36,11 +36,11 @@ namespace PIMS.Models
         public string InsuranceCarrier { get; set; }
         public string InsuranceInfo { get; set; }
         public string BillingInfo { get; set; }
-        public string AmountPaid { get; set; }
-        public string AmountOwed { get; set; }
-        public string AmountInsurancePaid { get; set; }
+        public int AmountPaid { get; set; }
+        public int AmountOwed { get; set; }
+        public int AmountInsurancePaid { get; set; }
         public string ApprovedVisitors { get; set; }
-        public string NumberOfVisitors { get; set; }
+        public int NumberOfVisitors { get; set; }
     }
 
     public class PatientList
