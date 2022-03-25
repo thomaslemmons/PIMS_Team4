@@ -3,6 +3,83 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Patient List</h1>
+    <style type="text/css">
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%
+        }
+
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg .tg-0lax {
+                text-align: left;
+                vertical-align: top
+            }
+    </style>
+    <table class="tg">
+        <thead>
+            <tr>
+                <th class="tg-0lax">Last</th>
+                <th class="tg-0lax">First</th>
+                <th class="tg-0lax">Address</th>
+                <th class="tg-0lax">Phone</th>
+                <th class="tg-0lax"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tg-0lax">Lemmons</td>
+                <td class="tg-0lax">Thomas</td>
+                <td class="tg-0lax">567 Test Ln</td>
+                <td class="tg-0lax">9317562486</td>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">View/Edit</a></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Grant</td>
+                <td class="tg-0lax">Kelsey</td>
+                <td class="tg-0lax">123 Jordan Ln</td>
+                <td class="tg-0lax">4865240590</td>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">View/Edit</a></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Stroud</td>
+                <td class="tg-0lax">Alex</td>
+                <td class="tg-0lax">456 West St</td>
+                <td class="tg-0lax">6581123842</td>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">View/Edit</a></td>
+            </tr>
+            <tr>
+                <td class="tg-0lax">Smith</td>
+                <td class="tg-0lax">John</td>
+                <td class="tg-0lax">638 Sparkman Dr NW</td>
+                <td class="tg-0lax">2561234567</td>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">View/Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
 </div>
