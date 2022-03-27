@@ -1,0 +1,14 @@
+
+*.v2
+PIMS/.vs/PIMS/v16/.suo
+*.v2
+*.dll
+*.pdb
+*.cache
+PIMS/PIMS/obj/Debug/net5.0/PIMS.csproj.FileListAbsolute.txt
+PIMS/PIMS/obj/Debug/net5.0/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs
+PIMS/PIMS/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
+PIMS/PIMS/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs
+PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Home/DoctorPatientDetail.cshtml.g.cs
+PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
+*.cs
