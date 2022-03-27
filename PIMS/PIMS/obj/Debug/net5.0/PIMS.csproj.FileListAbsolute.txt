@@ -786,3 +786,5 @@ C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\PIMS.RazorTargetAssemblyInfo.cs
 C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\PIMS.Views.pdb
 C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\PIMS.csproj.CopyComplete
 C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\PIMS.genruntimeconfig.cache
+C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\Razor\Views\Home\DoctorPatientDetail.cshtml.g.cs
+C:\PIMS_Team4\PIMS\PIMS\obj\Debug\net5.0\Razor\Views\Home\DoctorPatientEdit.cshtml.g.cs
