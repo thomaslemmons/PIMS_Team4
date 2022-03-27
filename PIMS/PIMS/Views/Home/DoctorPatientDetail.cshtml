@@ -3,111 +3,143 @@
     ViewData["Title"] = "Detail Page";
 }
 
+
 <style type="text/css">
-    .tg {
-        border-collapse: collapse;
-        border-spacing: 0;
+    label {
+        font-weight: bold;
+        text-align: left;
     }
 
-        .tg td {
-            border-color: black;
-            border-style: solid;
-            border-width: 1px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            overflow: hidden;
-            padding: 10px 5px;
-            word-break: normal;
-        }
-
-        .tg th {
-            border-color: black;
-            border-style: solid;
-            border-width: 1px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            overflow: hidden;
-            padding: 10px 5px;
-            word-break: normal;
-        }
-
-        .tg .tg-6ic8 {
-            border-color: inherit;
-            font-weight: bold;
-            text-align: right;
-            vertical-align: top
-        }
-
-        .tg .tg-0pky {
-            border-color: inherit;
-            text-align: left;
-            vertical-align: top
-        }
+    hr {
+        width: 100%;
+    }
 </style>
-<table class="tg">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 style="text-align: center;">John R. Smith</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <a asp-controller="Home" asp-action="DoctorPatientEdit" class="btn btn-secondary" style="float: right;"> Edit</a>
+                        <h4>Details</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row ">
+                            <label class="col-md-2 test">Last:</label>
+                            <div class="col-md-2">Smith</div>
 
-    <tbody>
-        <tr>
-            <td class="tg-6ic8">Last:</td>
-            <td class="tg-0pky"><div contenteditable="true">Smith</div></td>
-            <td><button>Edit</button></td>
+                            <label class="col-md-2 test">First:</label>
+                            <div class="col-md-2">John</div>
 
-        </tr>
-        <tr>
-            <td class="tg-6ic8">First:</td>
-            <td class="tg-0pky"><div contenteditable="true">John</div></td>
-            <td><button>Edit</button></td>
+                            <label class="col-md-2 test">Middle:</label>
+                            <div class="col-md-2">Robert</div>
+
+                            <label class="col-md-2 test">Home Phone:</label>
+                            <div class="col-md-2">(931) 450-4246</div>
+
+                            <label class="col-md-2 test">Work Phone:</label>
+                            <div class="col-md-2">(931) 450-4246</div>
+
+                            <label class="col-md-2 test">Cell Phone:</label>
+                            <div class="col-md-2">(931) 450-4246</div>
+
+                            <label class="col-md-2 test">Address:</label>
+                            <div class="col-md-10">1300 Oak Dr NW</div>
+
+                            <label class="col-md-2 test">City:</label>
+                            <div class="col-md-2">Huntsville</div>
+
+                            <label class="col-md-2 test">State:</label>
+                            <div class="col-md-2">AL</div>
+
+                            <label class="col-md-2 test">ZipCode:</label>
+                            <div class="col-md-2">35810</div>
+
+                            <hr />
+                            <label class="col-md-12 test">Emergency Contact 1</label>
+
+                            <label class="col-md-2 test">Name:</label>
+                            <div class="col-md-2">Bob Sanchez</div>
+
+                            <label class="col-md-2 test">Phone:</label>
+                            <div class="col-md-2">(256) 987-2510</div>
+
+                            <label class="col-md-2 test"> Relationship:</label>
+                            <div class="col-md-2">Mother</div>
+
+                            <hr />
+                            <label class="col-md-12 test">Emergency Contact 2</label>
+
+                            <label class="col-md-2 test">Name:</label>
+                            <div class="col-md-2">Bobby Sanchez</div>
+
+                            <label class="col-md-2 test">Phone:</label>
+                            <div class="col-md-2">(456) 156-2164</div>
+
+                            <label class="col-md-2 test">Relationship:</label>
+                            <div class="col-md-2">Father</div>
+
+                            <hr />
+
+                            <label class="col-md-2 test">Admission Date:</label>
+                            <div class="col-md-2">3/1/2022</div>
+
+                            <label class="col-md-2 test">Admission Time:</label>
+                            <div class="col-md-2">2:30 pm</div>
+
+                            <label class="col-md-2 test">Admission Reason:</label>
+                            <div class="col-md-2">Chest Pain</div>
+
+                            <label class="col-md-2 test"> Family Doctor:</label>
+                            <div class="col-md-2">Dr. Roberts</div>
+
+                            <label class="col-md-2 test"> Discharge Date:</label>
+                            <div class="col-md-2">3/2/2022</div>
+
+                            <label class="col-md-2 test"> Discharge Time:</label>
+                            <div class="col-md-2">9:00 am</div>
+
+                            <hr />
+
+                            <label class="col-md-12 test">Location</label>
+
+                            <label class="col-md-2 test"> Floor:</label>
+                            <div class="col-md-2">3</div>
+
+                            <label class="col-md-2 test"> Room Number:</label>
+                            <div class="col-md-2">325</div>
+
+                            <label class="col-md-2 test"> Bed Number:</label>
+                            <div class="col-md-2">2</div>
+
+                            <hr />
+
+                            <label class="col-md-2 test"> Doctor Notes:</label>
+                            <div class="col-md-10" contenteditable="true"></div>
+
+                            <hr />
+
+                            <label class="col-md-2 test"> Nurse Notes:</label>
+                            <div class="col-md-10" contenteditable="true"></div>
+
+                            <hr />
+
+                            <label class="col-md-2 test"> Prescriptions:</label>
+                            <div class="col-md-10" contenteditable="true"></div>
+
+                            <hr />
+
+                            <label class="col-md-2 test"> Scheduled Procedures:</label>
+                            <div class="col-md-10" contenteditable="true"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
 
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Address:</td>
-            <td class="tg-0pky"><div contenteditable="true">638 Sparkman Dr NW</div></td>
-            <td><button>Edit</button></td>
+        </div>
+    </div>
+</body>
 
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Phone:</td>
-            <td class="tg-0pky"><div contenteditable="true">2561234567</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Room:</td>
-            <td class="tg-0pky"><div contenteditable="true">127</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Doctor:</td>
-            <td class="tg-0pky"><div contenteditable="true">Dr. Sanchez</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Admission Date:</td>
-            <td class="tg-0pky"><div contenteditable="true">3/1/2022</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Discharge Date</td>
-            <td class="tg-0pky"><div contenteditable="true">3/3/2022</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Doctor Notes:</td>
-            <td class="tg-0pky"><div contenteditable="true">Prescribed Ibuprofen</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-        <tr>
-            <td class="tg-6ic8">Nurse Notes</td>
-            <td class="tg-0pky"><div contenteditable="true">Change IV at 12:00 pm</div></td>
-            <td><button>Edit</button></td>
-
-        </tr>
-    </tbody>
-</table>

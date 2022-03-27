@@ -49,6 +49,15 @@ namespace PIMS.Controllers
             return View();
         }
 
+        public IActionResult DoctorPatientEdit(int id)
+        {
+            //get info for singular patient
+
+            Patient p = GetPatient(id);
+
+            return View();
+        }
+
         public IActionResult MedicalPatientList()
         {
             //get list of all patients from db
@@ -59,6 +68,15 @@ namespace PIMS.Controllers
         }
 
         public IActionResult MedicalPatientDetail(int id)
+        {
+            //get info for singular patient
+
+            Patient p = GetPatient(id);
+
+            return View();
+        }
+
+        public IActionResult MedicalPatientEdit(int id)
         {
             //get info for singular patient
 
@@ -85,6 +103,15 @@ namespace PIMS.Controllers
             return View();
         }
 
+        public IActionResult OfficePatientEdit(int id)
+        {
+            //get info for singular patient
+
+            Patient p = GetPatient(id);
+
+            return View();
+        }
+
         public IActionResult VolunteerPatientList()
         {
             //get list of all patients from db
@@ -95,6 +122,15 @@ namespace PIMS.Controllers
         }
 
         public IActionResult VolunteerPatientDetail(int id)
+        {
+            //get info for singular patient
+
+            Patient p = GetPatient(id);
+
+            return View();
+        }
+
+        public IActionResult VolunteerPatientEdit(int id)
         {
             //get info for singular patient
 
