@@ -1,6 +1,8 @@
 ﻿using LoginRegister.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using PIMS.Data;
 using System.Linq;
 using System.Threading.Tasks;
 namespace LoginRegister.Controllers
@@ -33,11 +35,11 @@ namespace LoginRegister.Controllers
                 };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
-                {
-                    //add role here
-                    await _userManager.AddToRoleAsync(user, "Admin");
-                    return RedirectToAction("ActionName", "ControllerName");
+                { 
+                    //await _userManager.AddToRoleAsync(user, "Admin");
+                    return RedirectToAction("Index", "Home");
                 }
+
             }
             ModelState.AddModelError("", "Invalid Register.");
             return View(model);
@@ -56,25 +58,26 @@ namespace LoginRegister.Controllers
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    var user = await _userManager.FindByNameAsync(model.Email);
+                    //var user = await _userManager.FindByNameAsync(model.Email);
+                    return RedirectToAction("Index", "Home");
                     //user role list here
-                    var roles = await _userManager.GetRolesAsync(user);
+                   // var roles = await _userManager.GetRolesAsync(user);
                     //get default role here
-                    string role = roles.FirstOrDefault();
-                    if (role.Equals("Admin"))
-                    {
-                        return RedirectToAction("AdminActionName", "AdminControllerName");
-                    }
-                    else if (role.Equals("User"))
-                    {
-                        return RedirectToAction("UserActionName", "UserControllerName");
-                    }
-                    else
-                    {
+                    //string role = roles.FirstOrDefault();
+                    //if (role.Equals("Admin"))
+                    //{
+                        //return RedirectToAction("DoctorPatientList", "Home");
+                    //}
+                    //else if (role.Equals("User"))
+                    //{
+                        //return RedirectToAction("DoctorPatientList", "Home");
+                    //}
+                    //else
+                    //{
                         //do something here. put in your logic 
-                    }
+                    //}
                 }
-            }
+           }
             ModelState.AddModelError("", "Invalid ID or Password");
             return View(model);
         }
