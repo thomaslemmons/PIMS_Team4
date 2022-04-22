@@ -3847,24 +3847,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/kelseygrant/.nuget/packages/": {}
+    "C:\\Users\\kelse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kelseygrant/Documents/GitHub/PIMS_Team4/PIMS/PIMS/PIMS.csproj",
+      "projectUniqueName": "C:\\Users\\kelse\\Documents\\GitHub\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj",
       "projectName": "PIMS",
-      "projectPath": "/Users/kelseygrant/Documents/GitHub/PIMS_Team4/PIMS/PIMS/PIMS.csproj",
-      "packagesPath": "/Users/kelseygrant/.nuget/packages/",
-      "outputPath": "/Users/kelseygrant/Documents/GitHub/PIMS_Team4/PIMS/PIMS/obj/",
+      "projectPath": "C:\\Users\\kelse\\Documents\\GitHub\\PIMS_Team4\\PIMS\\PIMS\\PIMS.csproj",
+      "packagesPath": "C:\\Users\\kelse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kelse\\Documents\\GitHub\\PIMS_Team4\\PIMS\\PIMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kelseygrant/.config/NuGet/NuGet.Config"
+        "C:\\Users\\kelse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3930,7 +3932,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
