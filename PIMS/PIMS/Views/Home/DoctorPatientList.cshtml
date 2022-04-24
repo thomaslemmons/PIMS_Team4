@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+<div className="container body-content container-grid">
+    <div class="input-group rounded">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+        </span>
+    </div>&nbsp;
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th class="tg-0lax">ID</th>
+                <th class="tg-0lax">Last</th>
+                <th class="tg-0lax">First</th>
+                <th class="tg-0lax">Address</th>
+                <th class="tg-0lax">Phone</th>
+                <th class="tg-0lax"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0000</a></td>
+                <td class="tg-0lax">Lemmons</td>
+                <td class="tg-0lax">Thomas</td>
+                <td class="tg-0lax">567 Test Ln</td>
+                <td class="tg-0lax">(931) 756-2486</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0001</a></td>
+                <td class="tg-0lax">Grant</td>
+                <td class="tg-0lax">Kelsey</td>
+                <td class="tg-0lax">123 Jordan Ln</td>
+                <td class="tg-0lax">(486) 524-0590</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0002</a></td>
+                <td class="tg-0lax">Stroud</td>
+                <td class="tg-0lax">Alex</td>
+                <td class="tg-0lax">456 West St</td>
+                <td class="tg-0lax">(658) 112-3842</td>
+            </tr>
+            <tr>
+                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0003</a></td>
+                <td class="tg-0lax">Smith</td>
+                <td class="tg-0lax">John</td>
+                <td class="tg-0lax">638 Sparkman Dr NW</td>
+                <td class="tg-0lax">(256) 123-4567</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
