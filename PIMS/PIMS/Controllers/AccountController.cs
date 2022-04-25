@@ -2,7 +2,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using PIMS.Controllers;
 using PIMS.Data;
+using PIMS.Models;
+using System;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 namespace LoginRegister.Controllers
@@ -55,26 +59,55 @@ namespace LoginRegister.Controllers
         {        
             if (ModelState.IsValid)
             {
+
+                var userRole = -1;
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    using (var db = new RoleContext())
+                    {
+                        var query = from r in db.Roles
+                                    where r.Email == model.Email
+                                    select r.Role;
+                        foreach (var item in query)
+                        {
+                            userRole = item;
+                        }
+                        
+                    }
                     //var user = await _userManager.FindByNameAsync(model.Email);
-                    return RedirectToAction("Index", "Home");
+                    if (userRole == (int)Role.Doctor)
+                    {
+                        return RedirectToAction("DoctorPatientList", "Home");
+                    }
+                    if (userRole == (int)Role.MedicalStaff)
+                    {
+                        return RedirectToAction("NursePatientList", "Home");
+                    }
+                    if (userRole == (int)Role.OfficeStaff)
+                    {
+                        return RedirectToAction("OfficePatientList", "Home");
+                    }
+                    if (userRole == (int)Role.Volunteer)
+                    {
+                        return RedirectToAction("VolunteerPatientList", "Home");
+                    }
+
                     //user role list here
-                   // var roles = await _userManager.GetRolesAsync(user);
+                    // var roles = await _userManager.GetRolesAsync(user);
                     //get default role here
                     //string role = roles.FirstOrDefault();
                     //if (role.Equals("Admin"))
                     //{
-                        //return RedirectToAction("DoctorPatientList", "Home");
+                    //return RedirectToAction("DoctorPatientList", "Home");
                     //}
                     //else if (role.Equals("User"))
                     //{
-                        //return RedirectToAction("DoctorPatientList", "Home");
+                    //return RedirectToAction("DoctorPatientList", "Home");
                     //}
                     //else
                     //{
-                        //do something here. put in your logic 
+                    //do something here. put in your logic 
                     //}
                 }
            }
