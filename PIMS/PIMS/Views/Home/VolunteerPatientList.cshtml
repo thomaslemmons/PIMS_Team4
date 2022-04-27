@@ -1,4 +1,9 @@
-﻿<head>
+﻿@model PIMS.Models.PatientList
+@{
+    ViewData["Title"] = "List Page";
+}
+
+<head>
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <style>
@@ -19,40 +24,24 @@
                 <th class="tg-0lax">ID</th>
                 <th class="tg-0lax">Last</th>
                 <th class="tg-0lax">First</th>
-                <th class="tg-0lax">Address</th>
-                <th class="tg-0lax">Phone</th>
-                <th class="tg-0lax"></th>
+                <th class="tg-0lax">Floor</th>
+                <th class="tg-0lax">Room</th>
+                <th class="tg-0lax">Bed</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0000</a></td>
-                <td class="tg-0lax">Lemmons</td>
-                <td class="tg-0lax">Thomas</td>
-                <td class="tg-0lax">567 Test Ln</td>
-                <td class="tg-0lax">(931) 756-2486</td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0001</a></td>
-                <td class="tg-0lax">Grant</td>
-                <td class="tg-0lax">Kelsey</td>
-                <td class="tg-0lax">123 Jordan Ln</td>
-                <td class="tg-0lax">(486) 524-0590</td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0002</a></td>
-                <td class="tg-0lax">Stroud</td>
-                <td class="tg-0lax">Alex</td>
-                <td class="tg-0lax">456 West St</td>
-                <td class="tg-0lax">(658) 112-3842</td>
-            </tr>
-            <tr>
-                <td class="tg-0lax"><a asp-controller="Home" asp-action="DoctorPatientDetail">0003</a></td>
-                <td class="tg-0lax">Smith</td>
-                <td class="tg-0lax">John</td>
-                <td class="tg-0lax">638 Sparkman Dr NW</td>
-                <td class="tg-0lax">(256) 123-4567</td>
-            </tr>
+            @foreach (Patient p in Model.Patients)
+            {
+                <tr>
+                    <td class="tg-0lax"><a asp-controller="Home" asp-action="VolunteerPatientDetail" asp-route-id="@p.PatientID">@p.PatientID</a></td>
+                    <td class="tg-0lax">@p.LastName</td>
+                    <td class="tg-0lax">@p.FirstName</td>
+                    <td class="tg-0lax">@p.FloorNumber</td>
+                    <td class="tg-0lax">@p.RoomNumber</td>
+                    <td class="tg-0lax">@p.BedNumber</td>
+                </tr>
+            }
+
         </tbody>
     </table>
 </div>

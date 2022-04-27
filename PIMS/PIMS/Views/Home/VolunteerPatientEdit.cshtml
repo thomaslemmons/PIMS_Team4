@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model PIMS.Models.Patient
 @{
+    ViewData["Title"] = "Edit Page";
+}
+
+<style type="text/css">
+    label {
+        font-weight: bold;
+        text-align: left;
+    }
+
+    hr {
+        width: 100%;
+    }
+</style>
+
+<h3 class="text-center">@Model.FirstName @Model.LastName</h3>
+&nbsp;
+@using (Html.BeginForm("VolunteerPatientEdit", "Home", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="FirstName" value="@Model.FirstName">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="middleName">Middle Name</label>
+            <input type="text" class="form-control" id="middleName" name="MiddleName" value="@Model.MiddleName">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="LastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="LastName" value="@Model.LastName">
+        </div>
+    </div>
+    <hr />
+    <label>Location</label>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="floorNumber">Floor</label>
+            <input type="text" class="form-control" id="floorNumber" name="FloorNumber" value="@Model.FloorNumber">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="roomNumber">Room Number</label>
+            <input type="text" class="form-control" id="roomNumber" name="RoomNumber" value="@Model.RoomNumber">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="bedNumber">Bed Number</label>
+            <input type="text" class="form-control" id="bedNumber" name="BedNumber" value="@Model.BedNumber">
+        </div>
+    </div>
+    <hr />
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="numberOfVisitors">Number Of Visitors</label>
+            <input type="text" class="form-control" id="numberOfVisitors" name="NumberOfVisitors" value="@Model.NumberOfVisitors">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="approvedVisitors">Approved Visitors</label>
+        <textarea class="form-control" id="approvedVisitors" name="ApprovedVisitors" rows="3">@Model.ApprovedVisitors</textarea>
+    </div>
+    <hr />
+
+    <input type="submit" class="btn btn-primary" value="Submit" />
 }
