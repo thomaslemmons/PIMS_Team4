@@ -19,7 +19,7 @@
         <a type="button" class="btn btn-secondary btn-lg btn-block" asp-controller="Home" asp-action="OfficePatientList">Patient List</a>
     @{ if (Model.Role == 3)}
         <a type="button" class="btn btn-secondary btn-lg btn-block" asp-controller="Home" asp-action="VolunteerPatientList">Patient List</a>*@
-
+    <h4>@ViewBag.userid</h4>
     <a type="button" class="btn btn-secondary btn-lg btn-block" asp-controller="Home" asp-action="DoctorPatientList">Patient List</a>
     <a type="button" class="btn btn-secondary btn-lg btn-block" asp-controller="Account" asp-action="Login">Logout</a>
 </div>

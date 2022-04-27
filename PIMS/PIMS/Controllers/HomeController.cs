@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PIMS.Models;
+using LoginRegister.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,7 +12,7 @@ using System.Configuration;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using PIMS.Data;
-
+using Microsoft.AspNetCore.Identity;
 
 namespace PIMS.Controllers
 {
@@ -27,26 +28,58 @@ namespace PIMS.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration _configuration;
+        private readonly UserManager<IdentityUser> _userManager;
 
-
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, UserManager<IdentityUser> userManager)
         {
             _logger = logger;
             _configuration = configuration;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
         {
-            /*if (User.Identity.IsAuthenticated)
+            if (User.Identity.IsAuthenticated)
             {
-                if ()
-                return View();
+                LoginViewModel model = new LoginViewModel();
+                model.Email = User.Identity.Name;
+                var userRole = -1;
+                using (var db = new RoleContext())
+                {
+                    var query = from r in db.Roles
+                                where r.Email == model.Email
+                                select r.Role;
+                    foreach (var item in query)
+                    {
+                        userRole = item;
+                    }
+
+                }
+                if (userRole == (int)Role.Doctor)
+                {
+                    return RedirectToAction("DoctorPatientList", "Home");
+                }
+                else if (userRole == (int)Role.MedicalStaff)
+                {
+                    return RedirectToAction("NursePatientList", "Home");
+                }
+                else if (userRole == (int)Role.OfficeStaff)
+                {
+                    return RedirectToAction("OfficePatientList", "Home");
+                }
+                else if (userRole == (int)Role.Volunteer)
+                {
+                    return RedirectToAction("VolunteerPatientList", "Home");
+                }
+                else
+                {
+                    return Redirect("/");
+                }
             }
             else
             {
                 return Redirect("/");
-            }*/
-            return Redirect("/");
+            }
         }
 
         [Route("Home/DoctorPatientList/{id?}")]
