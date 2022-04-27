@@ -11,7 +11,6 @@ PIMS/PIMS/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
 PIMS/PIMS/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs
 PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Home/DoctorPatientDetail.cshtml.g.cs
 PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs
-*.cs
 *.scss
 PIMS/PIMS/bin/Debug/net5.0/PIMS.dll
 *.less
@@ -24,7 +23,6 @@ PIMS/PIMS/Views/Home/font-awesome-4.7.0/HELP-US-OUT.txt
 *.woff2
 PIMS/PIMS/Views/Home/font-awesome-4.7.0/fonts/fontawesome-webfont.woff
 *.user
-*.cs
 PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 PIMS/PIMS/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs
 *.user
