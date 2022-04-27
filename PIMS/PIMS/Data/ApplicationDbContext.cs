@@ -53,3 +53,24 @@ namespace PIMS.Data
         }
     }
 }
+
+namespace PIMS.Data
+{
+    public partial class PatientContext : DbContext
+    {
+        public PatientContext()
+        { }
+        public virtual DbSet<Patient> Patients
+        {
+            get; set;
+        }
+        public PatientContext(DbContextOptions<PatientContext> options)
+            : base(options)
+        {
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=uahserver.database.windows.net;Initial Catalog=PIMS;Persist Security Info=True;User ID=uahdev;Password=Ci2M%DU3p8^HX5x3@$");
+        }
+    }
+}
