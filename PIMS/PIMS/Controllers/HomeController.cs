@@ -56,24 +56,9 @@ namespace PIMS.Controllers
 
             PatientList PList = new PatientList();
             List<Patient> PatientList = new List<Patient>();
-            PList.Patients = GetPatientList();
-            using (var db = new PatientContext())
-            {
-                var query = from p in db.Patients
-                            select p;
-                if (!String.IsNullOrEmpty(id))
-                {
-                    query = query.Where(s => s.FirstName!.Contains(id) || s.LastName!.Contains(id));
-                }
-                foreach (var item in query)
-                {
-                    Patient p1 = item;
+            PList.Patients = GetPatientList(id);
+            ViewBag.SearchQuery = id;
 
-
-                    PatientList.Add(p1);
-                }
-            }
-            PList.Patients = PatientList;
             return View(PList);
         }
 
@@ -111,12 +96,14 @@ namespace PIMS.Controllers
             return Redirect("/Home/DoctorPatientDetail/" + id);
         }
 
-        public IActionResult NursePatientList()
+        [Route("Home/NursePatientList/{id?}")]
+        public IActionResult NursePatientList(string id)
         {
             //get list of all patients from db
 
             PatientList PList = new PatientList();
-            PList.Patients = GetPatientList();
+            PList.Patients = GetPatientList(id);
+            ViewBag.SearchQuery = id;
 
             return View(PList);
         }
@@ -155,12 +142,14 @@ namespace PIMS.Controllers
             return Redirect("/Home/NursePatientDetail/" + id);
         }
 
-        public IActionResult OfficePatientList()
+        [Route("Home/OfficePatientList/{id?}")]
+        public IActionResult OfficePatientList(string id)
         {
             //get list of all patients from db
 
             PatientList PList = new PatientList();
-            PList.Patients = GetPatientList();
+            PList.Patients = GetPatientList(id);
+            ViewBag.SearchQuery = id;
 
             return View(PList);
         }
@@ -198,12 +187,15 @@ namespace PIMS.Controllers
 
             return Redirect("/Home/OfficePatientDetail/" + id);
         }
-        public IActionResult VolunteerPatientList()
+
+        [Route("Home/VolunteerPatientList/{id?}")]
+        public IActionResult VolunteerPatientList(string id)
         {
             //get list of all patients from db
 
             PatientList PList = new PatientList();
-            PList.Patients = GetPatientList();
+            PList.Patients = GetPatientList(id);
+            ViewBag.SearchQuery = id;
 
             return View(PList);
         }
@@ -242,7 +234,7 @@ namespace PIMS.Controllers
             return Redirect("/Home/VolunteerPatientDetail/" + id);
         }
 
-        public List<Patient> GetPatientList()
+        public List<Patient> GetPatientList(string id)
         {
             //call database and get list of patients
 
@@ -252,6 +244,10 @@ namespace PIMS.Controllers
             {
                 var query = from p in db.Patients
                             select p;
+                if (!String.IsNullOrEmpty(id))
+                {
+                    query = query.Where(s => s.FirstName!.Contains(id) || s.LastName!.Contains(id));
+                }
                 foreach (var item in query)
                 {
                     Patient p1 = item;

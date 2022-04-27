@@ -13,10 +13,10 @@
 </style>
 <div className="container body-content container-grid">
     <div class="input-group rounded">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <span class="input-group-text border-0" id="search-addon">
-            <i class="fas fa-search"></i>
-        </span>
+        <form class="input-group rounded" asp-controller="Home" asp-action="OfficePatientList">
+            <input type="text" class="form-control rounded" placeholder="Search" name="id" value="@ViewBag.SearchQuery" />
+            <input type="submit" class="btn btn-secondary border-0" value="Search" />
+        </form>
     </div>&nbsp;
     <table class="table">
         <thead class="thead-light">
